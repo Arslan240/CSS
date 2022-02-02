@@ -1,0 +1,59 @@
+/* The container properties of flexbox are actually used for positioning and layout of the items.
+   We can have row, column, alignment, wrap etc. */
+
+.flexbox-container{
+  background-color: #ffff00;
+  min-height: 500px;
+  
+  
+  display: flex; /* flexbox - We define a container and give it the display: flex; It makes it a flexbox container. It's inner items are flex-items*/
+  flex-direction: row;
+  
+  
+  
+  
+  /* justify-content: center;
+  align-items: center; */
+  /* align-content: center; */
+
+ 
+ 
+  /*justify-content: space-around;*/ /* this property is to space evenly or unevenly or at the start or however we want to space them, we can also center them*/
+ /*align-items: stretch;*/ /*is default - stretch changes the length of the items across the cross axis and makes it fill the entire available space. If it's set to flex-start then the items will retain their original lengths.*/
+  /*align-items: center;*/ /*centers across cross axis*/
+  /* align-content: space-between; */
+
+}
+
+
+
+
+.flexbox-item{
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+}
+
+/* Flexbox item properties are actually used for either overriding some properties set by flexbox container. OR to set different sizes of the items and stuff like that. */
+/* Flex shrink will make the item to not change the size according to container. It'll retain it's original size.
+   Similarly, flex grow:1 will make the element to take up all the available space. We can also set it to 2,3 etc. This sets the ratio between different flex items which have the property set to something.*/
+.flexbox-item-1{
+  min-height: 100px;
+  /* flex-shrink: 0; */
+  /* Align-self can be applied to override the align-content property of the parent container. align-self will make them their original size and not let them take all the available vertical space for an item. */
+  align-self: flex-end; /*align items at the end of main axis in the container*/
+  align-self: center;
+
+  /* flex-grow: 1; */
+}
+
+.flexbox-item-2{
+  min-height: 200px;
+  /* flex-grow: 1; */
+}
+
+.flexbox-item-3{
+  min-height: 300px;
+  /* flex-grow: 1; */
+}
