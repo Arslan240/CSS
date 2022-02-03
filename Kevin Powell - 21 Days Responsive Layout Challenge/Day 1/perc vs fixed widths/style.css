@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+/* All the block level elements like div, p, etc have a width of 100% by default. Now this 100% is 100% of the width of the parent. If parent's width is set child's width will change accordingly. */
+
+.parent {
+  background-color: blue;
+  padding: 50px;
+
+  /* width: 900px; */ /*When we don't have the width explicitly assigned,we have to make it repsonsive*/
+  margin: 0 auto;
+  width: 80%; /*Gives us native responsiveness without setting explicit values and media queries*/
+  /* min-width: 40%; */
+}
+
+/* We can also set % on the child elements. */
+.child{
+  background-color: azure;
+  /* 50% width of child is % of it's parent's width */
+  width: 100%;
+  /* height in specific units is not responsive */
+  /* height: 250px; */
+  /* em = font-size of the container * number entered. e.g 16 * 3 = 18px. Where as 16px is the default font-size in the browser. If we have set something else for our container, it'll work according to that */
+  padding: 3em;
+}
