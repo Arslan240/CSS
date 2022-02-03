@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Open+Sans:wght@400;700&family=Poppins:ital,wght@0,400;0,800;1,600&display=swap');
+
+/* Base Styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 65.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  text-decoration: none;
+  font-weight: 400;
+  /* 1.6rem*10 = 16px */
+  font-size: 1.6rem;
+}
+h1,h2,p{
+  margin: 1.6rem 0;
+}
+h1{
+  font-weight: 800;
+  font-size: 3.6rem;
+}
+h2{
+  font-weight: 800;
+  font-size: 2.4rem;
+}
+p{
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+/* To make images responsive we set width to 100% and makes it's height auto.*/
+img{
+  width: 100%;
+  height: auto;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+
+/* Hero Section */
+
+/* Header */
+header{
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.6), url(images/bg.jpg));
+  background-repeat: no-repeat;
+}
