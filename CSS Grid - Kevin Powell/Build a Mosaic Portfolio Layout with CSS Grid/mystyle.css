@@ -1,0 +1,84 @@
+/* My try -  IDK what it is, but it's something */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  /* padding:  2rem; */
+  
+
+}
+
+.grid-container {
+  background: slateblue;
+
+  /* place-content: center;
+  min-height: 100vh; */
+  padding-block: 2rem;
+  /* width: min(95%, 70rem); */
+  display: grid;
+  gap: 1.5rem;
+  
+  /* grid-auto-columns: 1fr; */
+  grid-template-columns: repeat(5, 1fr);
+  /* grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five'
+  'six'; */
+}
+
+/* @media (min-width:30em){
+  .grid-container{
+    grid-template-areas: 
+    'one one two two two two'
+    'one one two two two two'
+    'three three two two two'
+    'three three four five five'
+    'six six six five five'
+    'six six six five five'
+    ;
+  }
+} */
+
+.item-one{
+  /* grid-area: one; */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row:1 / 3;
+}
+.item-two{
+  /* grid-area: one; */
+  grid-column-start: 3;
+  grid-column-end: -1;
+  grid-row:1 / 4;
+}
+.item-three{
+  /* grid-area: one; */
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row:3 / 5;
+}
+/* .item-four{
+ 
+} */
+.item-five{
+  grid-column-start: 4;
+  grid-column-end: -1;
+  grid-row:4 / 7;
+}
+.item-six{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row:5 / 7;
+}
+
+.grid-item {
+  background: orangered;
+
+  padding: 2rem;
+}
