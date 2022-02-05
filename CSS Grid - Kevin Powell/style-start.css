@@ -150,7 +150,17 @@ h3 {
   gap: 1.5rem;
   /* Don't set up your rows unless you really have to. We can get away with just declalring columns, cz then it'll falls into how many rows we actually need automatically acc to viewport we are in. */
   /* grid-template-columns: repeat(4, 1fr); */
-
+  
+  /* While using grid-template-areas we can use grid-auto-column property and it will set every new automatically generated column to the specified size */
+  grid-auto-columns: 1fr;
+  /* Another way of doing this whole design is by setting area names and then using them */
+  /* a single ' ' sets one row, if we remove media query thing while setting it, we'll see these areas in rows and order as we defined it. */
+  grid-template-areas: 
+  'one'
+  'two'
+  'three'
+  'four'
+  'five';
   
 
   padding-block: 2rem;
@@ -158,35 +168,70 @@ h3 {
   margin-inline: auto;
 }
 
+/* Using Template Area names */
+.testimonial:nth-child(1) {
+  /* To place something on a grid area we specifiy the area name that specific child should be living on. */
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
 
 
+/* Another media query for another screen. We can just change it so easily with template areas. */
+@media(min-width : 30em){
+  .testimonial-grid {
+    grid-template-areas: 
+      'one one'
+      'two five'
+      'three five'
+      'four four';
+  }
+}
 
 
 /* So we have set layout for mobile design first and for desktop we set styles inside the media query. We do it thagt way because on mobile it's easier layout than desktop lahyout. So we set easier one first so that we don't have to undo the complex layout in the mobile version if we set desktop layout first. */
 @media (min-width: 50em){
   /* Using Template Area names */
-  
+  .testimonial-grid {
+    grid-template-areas: 
+       /* This will create two rows. */ 
+      'one one two five'
+      'three four four five';
+  }
   
   /* Without Using Template Area names */
-  .testimonial-grid{
+  /* .testimonial-grid{
     grid-template-columns: repeat(4, 1fr);
-  }
+  } */
 
       /** Only apply specifically line numbers if you have to other wise just use spans, if you can generalize the span values across multiple grid items. It's less specific and make things easier to work with **/
-  .testimonial:last-child {
+  /* .testimonial:last-child {
     grid-column-start: 4;
     /* grid-row-start: 1; */
     /* grid-row-end: span 2; */
     /* OR we use short hand */
     /* grid-row: 1 / 3;  */
-    grid-row: 1 / span 2;
-  }
+    /* grid-row: 1 / span 2;
+  } */ 
 
   /* spanning - We only need spanning while in desktop mode */
-  .grid-col-span-2 {
+  /* .grid-col-span-2 {
     grid-column: span 2;
-  }
+  } */
 }
+
+
+
 
 .testimonial {
   font-size: var(--fs-400);
