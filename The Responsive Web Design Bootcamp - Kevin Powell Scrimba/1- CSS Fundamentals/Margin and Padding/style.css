@@ -5,6 +5,7 @@
 
 .card {
   background: black;
+  font-family: sans-serif;
   color: white;
   padding: 2em;
   width: 560px;
@@ -12,22 +13,35 @@
 }
 
 .links {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 .yellow{
   color: yellow;
 }
+.card-stuff{
+  margin-top: 2rem;
+}
+.button{
+  background: #FFE600;
+  color: black;
+  padding: 1rem;
+  /* inline-block lets inline elements to have margin-top and bottom. */
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+.button:hover{
+  background-color: orange;
+}
+
 a {
   padding: 0 1em;
   text-decoration: none;
   cursor: pointer;
 }
-a:link {
-  color: #FFE600;
-}
-a:focus { /*it shows up when using keyboard to access the link. */
+
+/* a:focus { /*it shows up when using keyboard to access the link. */
   color: aquamarine;
-}
+} */
 a:hover { /*it shows up when we hover over the link using mouse. */
   color: firebrick;
 }
@@ -38,5 +52,4 @@ h1 {
 
 p {
   font-size: 1rem;
-  /* margin-top: 0; */
 }
