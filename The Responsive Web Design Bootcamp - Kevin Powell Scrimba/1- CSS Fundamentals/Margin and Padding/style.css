@@ -40,8 +40,8 @@ a {
 }
 
 /* a:focus { /*it shows up when using keyboard to access the link. */
-  color: aquamarine;
-} */
+  /* color: aquamarine;
+} */ 
 a:hover { /*it shows up when we hover over the link using mouse. */
   color: firebrick;
 }
