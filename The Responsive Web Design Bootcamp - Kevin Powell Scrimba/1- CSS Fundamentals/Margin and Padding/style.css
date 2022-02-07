@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.card {
+  background: black;
+  color: white;
+  padding: 2em;
+  width: 560px;
+  margin: 0 auto;
+}
+
+.links {
+  margin-top: 2em;
+}
+a {
+  padding: 0 1em;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+  /* margin-top: 0; */
+}
