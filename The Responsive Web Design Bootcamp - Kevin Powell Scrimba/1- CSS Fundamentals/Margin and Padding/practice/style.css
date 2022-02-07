@@ -1,0 +1,39 @@
+* {
+  /* margin: 0; */
+  box-sizing: border-box;
+}
+
+main{
+  width: 500px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 48px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+h2{
+  font-size: 32px;
+  margin-top: 0;
+}
+p{
+  font-size: 16px;
+}
+img{
+  max-width: 100%;
+  border-radius: 1rem;
+}
+
+.card{
+  background-color: #F1F1F1;
+  width: 500px;
+  padding: 1.5em;
+  border-radius: 1rem;
+}
+.para-1{
+  margin-top: 25px;
+}
+.para-12{
+  margin-top: 9px;
+}
