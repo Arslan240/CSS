@@ -42,12 +42,28 @@ header {
   display: inline-block;
   padding: 1rem 1.5rem;
   margin-right: 0.4em;
-  background: purple;
   text-decoration: none;
   font-weight: bold;
 }
 
-.section-one .btn{
+.btn-accent{
+  background: #FFE600;
+  color: black;
+}
+.btn-accent:hover {
+  background-color: #FFC100;
+}
+
+.btn-dark{
+  background: black;
+  color: #FFE600;
+}
+.btn-dark :hover {
+  background-color: purple ;
+}
+
+/* Using compound selectors. But we should use multiple classes like above. It's much simpler */
+/* .section-one .btn{
   background: #FFE600;
   color: black;
 }
@@ -61,4 +77,4 @@ header {
 }
 .section-two .btn:hover {
   background-color: purple ;
-}
+} */
