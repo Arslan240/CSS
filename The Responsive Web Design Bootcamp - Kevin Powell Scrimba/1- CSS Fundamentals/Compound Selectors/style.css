@@ -1,0 +1,64 @@
+body {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0; /*We want our stuff to stretch from one side of the screen to the other side of the screen*/
+}
+h1, h2, p{
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p{
+  font-size: 1rem;
+}
+
+a {
+  color: #FFE600;
+}
+
+header,
+section {
+  padding: 2rem;
+}
+
+header {
+  background-color: #FFE600;
+  color: #000;
+}
+
+.section-one {
+  background-color: black;
+  color: white;
+}
+
+.section-two p a{
+  color: black;
+}
+
+.btn{
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin-right: 0.4em;
+  background: purple;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section-one .btn{
+  background: #FFE600;
+  color: black;
+}
+.section-one .btn:hover {
+  background-color: #FFC100;
+}
+
+.section-two .btn{
+  background: black;
+  color: #FFE600;
+}
+.section-two .btn:hover {
+  background-color: purple ;
+}
