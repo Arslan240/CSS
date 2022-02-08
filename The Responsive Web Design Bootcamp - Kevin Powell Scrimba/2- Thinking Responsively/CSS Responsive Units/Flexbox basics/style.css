@@ -1,0 +1,72 @@
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.125rem;
+  color: #707070;
+  background: pink;
+}
+
+@media (min-width:400px){
+  body {
+    background: purple;
+  }
+}
+
+
+/* Typography */
+
+h1{
+  font-size: 3rem;
+  color: #212614;
+  text-align: center;
+}
+
+h2{
+  font-size: 1.5rem;
+}
+
+p {
+  margin-top: .5em;
+}
+
+.container h1 span {
+  color: #b7832f;
+}
+
+
+/* Layout */
+
+img{
+  width: 100%;
+}
+
+.container{
+  width: 85%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin: .5em 0;
+}
+
+  /* we reduced 25 to 20, 50 to 45 and 75 to 70 because we need some space left behind to use justify-content property to allocate space */
+.col-1 {
+  width: 20%;
+}
+.col-2 {
+  width: 45%;
+}
+.col-3 {
+  width: 70%;
+}
+
+.col-bg {
+  background-color: #212614;
+  color: white;
+  padding: 1em;
+}
