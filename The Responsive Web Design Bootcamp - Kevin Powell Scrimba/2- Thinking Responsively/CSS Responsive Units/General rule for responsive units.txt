@@ -1,0 +1,4 @@
+ -----  GENERAL RULE OF THUMB  -----
+ 1- Font-size          = rem                (em causes compounding issues in nested containers)
+ 2- Padding and margin = em                 ()
+ 3- Widths             = em or % 

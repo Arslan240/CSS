@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.card {
+  background: black;
+  font-family: sans-serif;
+  color: white;
+  padding: 2em;
+  width: 560px;
+  margin: 0 auto;
+}
+
+.links {
+  margin-top: 1em;
+}
+.yellow{
+  color: yellow;
+}
+.card-stuff{
+  margin-top: 2rem;
+}
+.button{
+  background: #FFE600;
+  color: black;
+  /* before */
+  /* padding: 1rem; */
+  /* After - ems makes scaling a lot synchronous. Because padding and margins in ems, the em will be relative to the font size of that specific container on which it is applied to it's more synchronous*/
+  padding: .5em 1.25em;
+  /* inline-block lets inline elements to have margin-top and bottom. */
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+.button:hover{
+  background-color: orange;
+}
+
+/* setting classes to make btns big or shrink them to understand use of rems */
+.btn-big {
+  font-size: 1.5rem;
+}
+.btn-small {
+  font-size: 0.75rem;
+}
+
+
+a {
+  padding: 0 1em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* a:focus { /*it shows up when using keyboard to access the link. */
+  /* color: aquamarine;
+} */ 
+a:hover { /*it shows up when we hover over the link using mouse. */
+  color: white;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}

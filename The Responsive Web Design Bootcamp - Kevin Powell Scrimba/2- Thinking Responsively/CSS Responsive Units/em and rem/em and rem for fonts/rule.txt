@@ -1,0 +1,5 @@
+rem is relative to the root font-size
+
+em :
+  * font-size: em is relative to the parent of the current container
+  * margin, padding etc : em is relative to the font-size of the current container on which margin or padding is applied.
