@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@700&display=swap');
+
+body{
+  margin: 0;
+  font-size: 1rem;
+}
+li{
+  list-style-type: none;
+  border: 2px solid orange;
+}
+a{
+  text-decoration: none;
+}
+
+/* could not center it */ 
+.width-setter {
+  background: #f8f8f8;
+  padding: 2em 4em;
+  
+
+}
+
+
+.header-one {
+  border: 2px solid greenyellow;
+  background: #f8f8f8;
+  max-width: 70%; 
+  margin: 0 auto;
+  /* width: 100%; */
+  /* text-align: center; */
+  /* padding: 2em 4em; */
+}
+
+.heading {
+  border: 2px solid magenta;
+  margin: 0 auto;
+}
+.heading h1{
+  font-family: 'Lora',serif;
+  font-size: 3.375rem;
+  color: #143774;
+  margin: 0 auto;
+}
+.heading p {
+  font-family: 'Ubuntu';
+  margin: 0;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  margin-top: .45em;
+  font-size: 1rem;
+}
+
+.nav-one{
+  border: 2px solid magenta;
+  margin-top: 1em;
+}
+.nav-one ul {
+  display: flex;
+  text-transform: uppercase;
+  font-family: 'Ubuntu',serif;
+  font-size: 1rem;
+  justify-content: space-evenly;
+}
+
+.nav-one a {
+  color: #143774;
+}
+.nav-one a:hover,
+.nav-one a:active{
+  text-decoration: underline;
+}
