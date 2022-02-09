@@ -39,8 +39,9 @@ body{
   margin: 0 auto;
   padding: 1em 0;
   justify-content: space-between;
-  max-width: 60%;
+  max-width: 65%;
 }
+
 
 .site-title{
   text-align: center;
@@ -65,7 +66,7 @@ body{
   /* inner flex container */
 .list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   /* margin: 0; */
   /* margin: auto 0; */
   list-style: none;
@@ -73,11 +74,8 @@ body{
 }
 .list-item{
   margin-left: 2em;
+  text-align: center;
   text-transform: uppercase;
-}
-
-.list {
-  /* margin: 0 auto; */
 }
 
 /* Typography */
@@ -92,3 +90,33 @@ body{
   margin: 0.2em;
   font-size: 0.75rem;
 }
+
+/* Media Queries */
+
+  /* media query for outer flex at short screen */
+  @media (max-width: 895px) {
+    .flex-container {
+      flex-direction: column;
+    }
+    .list{
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 600px){
+    .site-title h1{
+      font-size: 1.5rem;
+    }
+    .flex-container{
+      max-width: 80%;
+    }
+    .list {
+      flex-direction: column;
+      padding: .2em;
+      margin: 0;
+    }
+    .list-item{
+      margin: .3em 0 0;
+      
+    }
+  }
