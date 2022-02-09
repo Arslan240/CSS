@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@700&display=swap');
+
+body{
+  margin: 0;
+  font-family: 'Ubuntu',sans-serif; /*Because only heading have lora so we'll give the body font of Ubunut and change it later on elements we want it to change*/
+}
+
+/* =======================
+    TYPOGRAPHY
+  ========================   */
+
+h1{
+  font-family: 'Lora',serif;
+  font-weight: 400; /*by default headings are bold, but we want them to be regular in this case*/
+  color: #143774;
+  font-size: 2rem;
+  margin: 0;
+}
+.subtitle {
+  font-weight: 700;
+  color: #1792d2;
+  font-size: .75rem;
+  margin: 0;
+}
+
+/* =======================
+    LAYOUT
+  ========================   */
+
+.container {
+  width: 90%;
+  max-width: 950px; 
+  border: 1px solid magenta;
+  margin: 0 auto;
+}
+.container-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  background: pink;
+  padding: 2em 0;
+  text-align: center;
+}
+
+
+nav ul {
+  /* border: 2px solid magenta; */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  /* border: 2px solid orange; */
+  /* we add padding and margin instead of width in ul because if we try to style it in ul, it would be a nightmare to add a new li when width can't accomodate new li. */
+  /* margin-left: 2em; */
+}
+
+nav a {
+  /* border: 2px solid green; */
+  text-decoration: none;
+  font-weight: 700;
+  color: #707070;
+  /* padding: .25em 0; */
+}
+
+nav a:hover,
+nav a:focus{
+  color: #1792d2;
+}
+
+/* It isn't interactive, we can make it by assigning class to the active page by using javascript */
+.current-page {
+  border-bottom:2px solid #707070 ;
+}
+.current-page:hover{
+  color: #707070;
+}

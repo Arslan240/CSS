@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@700&display=swap');
 
+/* border */
+li{
+  border: 2px solid orange;
+}
+.heading,
+.nav-one{
+  border: 2px solid magenta;
+}
+.header-one{
+  border: 2px solid greenyellow;
+}
+
 body{
   margin: 0;
   font-size: 1rem;
 }
 li{
   list-style-type: none;
-  border: 2px solid orange;
 }
 a{
   text-decoration: none;
@@ -16,13 +27,11 @@ a{
 .width-setter {
   background: #f8f8f8;
   padding: 2em 4em;
-  
-
 }
 
-
+/* i could not get the header to center because i was setting margin: 0 auto; to the inner container .heading */
 .header-one {
-  border: 2px solid greenyellow;
+  
   background: #f8f8f8;
   max-width: 70%; 
   margin: 0 auto;
@@ -31,9 +40,11 @@ a{
   /* padding: 2em 4em; */
 }
 
+
 .heading {
-  border: 2px solid magenta;
-  margin: 0 auto;
+  
+  text-align: center;
+  /* margin: 0 auto; */
 }
 .heading h1{
   font-family: 'Lora',serif;
@@ -51,11 +62,12 @@ a{
 }
 
 .nav-one{
-  border: 2px solid magenta;
-  margin-top: 1em;
+  margin-top: 2.5em;
 }
 .nav-one ul {
   display: flex;
+  max-width: 50%;
+  margin: 0 auto;
   text-transform: uppercase;
   font-family: 'Ubuntu',serif;
   font-size: 1rem;

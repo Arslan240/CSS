@@ -1,0 +1,46 @@
+
+body {
+  /* margin: 0; */
+}
+.header-container{
+  border: 2px solid magenta;
+}
+.header,
+.heading {
+  border: 2px solid yellow;
+}
+nav,
+a {
+  border: 2px solid blue;
+}
+
+/* Actual styles */
+ul{
+  list-style: none;
+}
+.list-item{
+  text-decoration: none;
+}
+
+.header-container {
+  background: #F8F8F8;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background: pink; /*useless*/
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+

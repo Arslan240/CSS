@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@700&display=swap');
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Ubuntu',serif;
+}
+
+/* .outer-container {
+  border: 2px solid magenta;
+}
+.flex-container {
+  border: 2px solid blue;
+}
+.site-title,nav {
+  border: 2px solid green;
+} 
+.list,
+.nav {
+  border: 2px solid;
+} */
+
+
+
+
+.outer-container {
+  background: #f8f8f8;
+}
+
+/* Layout */
+
+/* nav{
+  margin: auto 0;
+} */
+
+  /* outer flex for header */
+.flex-container {
+  display: flex;
+  margin: 0 auto;
+  padding: 1em 0;
+  justify-content: space-between;
+  max-width: 60%;
+}
+
+.site-title{
+  text-align: center;
+}
+  /* site title margin = 0 */
+.site-title h1{
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.list {
+  padding: 0;
+}
+
+.site-title,
+.list {
+  padding: 1em;
+}
+
+  /* List styles */
+
+  /* inner flex container */
+.list {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 0; */
+  /* margin: auto 0; */
+  list-style: none;
+  color: #707070;
+}
+.list-item{
+  margin-left: 2em;
+  text-transform: uppercase;
+}
+
+.list {
+  /* margin: 0 auto; */
+}
+
+/* Typography */
+.site-title h1 {
+  font-family: 'Lora',serif;
+  font-size: 2rem;
+  color: #143774;
+}
+.site-title p {
+  text-transform: capitalize;
+  color: #1792d2;
+  margin: 0.2em;
+  font-size: 0.75rem;
+}
