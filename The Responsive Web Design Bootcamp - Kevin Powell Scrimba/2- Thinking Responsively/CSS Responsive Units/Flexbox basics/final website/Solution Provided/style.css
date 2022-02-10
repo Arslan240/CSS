@@ -3,13 +3,20 @@
 body {
   margin: 0;
   font-family: 'Ubuntu',sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
 }
 
 img {
   max-width: 100%;
   display: block; /*images are inline by default which puts a space under them, so to remove the space we set them to block */
+}
+
+.image-full {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2em; 
 }
 
 /* ================
@@ -28,6 +35,10 @@ h3 {
 h1 {
   font-size: 2rem;
   margin: 0;
+}
+
+h3 {
+  color: #1792d2;
 }
 
 a {
@@ -75,6 +86,21 @@ strong {
   margin: 2em;
 }
 
+.widget-title,
+.widget-recent-post-title {
+  font-size: 1rem;
+}
+
+.widget-title {
+  font-size: 1rem;
+  font-family: 'Ubuntu',sans-serif;
+  font-weight: 700;
+}
+
+.widget-recent-post-title {
+  color: #143774;
+}
+
 
 /* ================
     LAYOUT
@@ -97,6 +123,13 @@ header {
   padding: 2em 0;
   text-align: center;
   margin-bottom: 2em;
+}
+
+footer {
+  background: #143774;
+  color: white;
+  text-align: center;
+  padding: 3em 0;
 }
 
 
@@ -225,4 +258,20 @@ nav a:focus {
   border: 20px solid #efefef;
   margin-bottom: 2em;
   padding: 1em;
+}
+
+.widget-recent-post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #707070;
+  margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child {
+  border: 0;
+  margin: 0;
+}
+
+.widget-image {
+  order: -1;
 }
