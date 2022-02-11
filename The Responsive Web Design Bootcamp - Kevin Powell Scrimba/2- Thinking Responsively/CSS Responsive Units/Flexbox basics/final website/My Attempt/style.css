@@ -1,24 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Ubuntu:wght@300;400;700&display=swap');
 
 body{
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Ubuntu',serif;
+  font-family: 'Ubuntu',sans-serif;
+  color: #707070;
+  line-height: 1.8rem;
 }
 
-/* .outer-container {
-  border: 2px solid magenta;
+img {
+  width: 100%;
 }
-.flex-container {
-  border: 2px solid blue;
+
+a {
+  color: #1792d2;
 }
-.site-title,nav {
-  border: 2px solid green;
-} 
-.list,
-.nav {
-  border: 2px solid;
-} */
+a:hover {
+  color: #00abb8;
+}
+
+*{
+  /* outline: 2px dotted red; */
+}
+
 
 
 
@@ -27,11 +31,9 @@ body{
   background: #f8f8f8;
 }
 
-/* Layout */
-
-/* nav{
-  margin: auto 0;
-} */
+/* =============
+  Layout 
+   =============*/
 
   /* outer flex for header */
 .flex-container {
@@ -39,7 +41,7 @@ body{
   margin: 0 auto;
   padding: 1em 0;
   justify-content: space-between;
-  max-width: 65%;
+  max-width: 60%;
 }
 
 
@@ -70,15 +72,61 @@ body{
   /* margin: 0; */
   /* margin: auto 0; */
   list-style: none;
-  color: #707070;
 }
 .list-item{
   margin-left: 2em;
   text-align: center;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
-/* Typography */
+/* images */
+/* hero image */
+.hero-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* border for hero section in hero section */
+.hero-section {
+  margin-bottom: 1.5em;
+  padding-bottom: .3em;
+  border-bottom: 1px solid #707070;
+}
+
+/* Margins and paddings for sidebar */
+.about-me,
+.recent-posts {
+  border: 1.3em solid #EFEFEF;
+  padding: 1.3em;
+  margin-bottom: 2.5em;
+}
+
+/* margin bottom setting for sidebar recent posts */
+.sidebar-recent-post {
+  border-bottom:1px solid #707070 ;
+  margin-bottom: 2em;
+}
+
+/* =============
+  Typography 
+  ==============*/
+
+h2 {
+  color: #143774;
+  font-family: 'Lora',serif;
+  font-weight: 400;
+}
+
+strong {
+  color: #707070;
+}
+
+.list-item a {
+  color: #707070;
+}
+
 .site-title h1 {
   font-family: 'Lora',serif;
   font-size: 2rem;
@@ -91,12 +139,46 @@ body{
   font-size: 0.75rem;
 }
 
+.continue-reading {
+  text-decoration: none;
+  color: #1792d2;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.heading-letter-spacing {
+  letter-spacing: .2em;
+}
+
+.sidebar-heading {
+  text-transform: uppercase;
+  font-family: 'Ubuntu',sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.recent-post-heading {
+  font-size: 1.1rem;
+  margin-bottom: 1em;
+}
+
+.about-me {
+  color: #143774;
+}
+
+/* date and comment count */
+.article-info {
+  font-size: .8rem;
+}
+
+
 /* Media Queries */
 
   /* media query for outer flex at short screen */
   @media (max-width: 895px) {
     .flex-container {
       flex-direction: column;
+      max-width: 75%;
     }
     .list{
       margin: 0;
@@ -108,7 +190,7 @@ body{
       font-size: 1.5rem;
     }
     .flex-container{
-      max-width: 80%;
+      max-width: 90%;
     }
     .list {
       flex-direction: column;
@@ -120,3 +202,52 @@ body{
       
     }
   }
+
+  @media (min-width: 895px) {
+    .col-one {
+      width: 70%;
+    }
+    .sidebar {
+      width: 25%;
+    }
+
+    article {
+      display: flex;
+      padding: 1em 0;
+      justify-content: space-between;
+    }
+    article p,h2 {
+      margin-top: 0;
+    }
+    .article-excerpt {
+      margin-bottom: .5em;
+    }
+    .article-col-1 {
+      width: 30%;
+    }
+    .article-col-2 {
+      width: 67%;
+    }
+    /* comments in articles */
+    article .article-info {
+      margin: 1em;
+    }
+    /* images in articles */
+    .article-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+
+  /* Put this in media query after developing desktop styles */
+
+
+
+
+
+
+
+
+
