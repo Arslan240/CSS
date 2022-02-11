@@ -19,6 +19,11 @@ a:hover {
   color: #00abb8;
 }
 
+footer {
+  background-color: #143774;
+  padding: 1em;
+}
+
 *{
   /* outline: 2px dotted red; */
 }
@@ -63,6 +68,17 @@ a:hover {
   padding: 1em;
 }
 
+/* footer styles */
+.footer-content {
+  margin: 0 auto;
+  text-align: center;
+  color: #EFEFEF;
+}
+
+/* border bottom for current page */
+.current-page {
+  border-bottom: 1px solid #707070;
+}
   /* List styles */
 
   /* inner flex container */
@@ -73,11 +89,15 @@ a:hover {
   /* margin: auto 0; */
   list-style: none;
 }
+.list a {
+  text-decoration: none;
+}
 .list-item{
   margin-left: 2em;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
+  cursor: pointer;
 }
 
 /* images */
