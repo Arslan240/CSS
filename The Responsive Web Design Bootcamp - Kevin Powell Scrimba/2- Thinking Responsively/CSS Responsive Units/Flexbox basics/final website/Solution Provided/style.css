@@ -2,9 +2,10 @@
 
 body {
   margin: 0;
-  font-family: 'Ubuntu',sans-serif;
+  font-family: 'Lora',sans-serif;
   font-size: 1.25rem;
   font-weight: 300;
+  line-height: 1.6;
 }
 
 img {
@@ -26,7 +27,7 @@ img {
 h1,
 h2, /*h2 = for .article-title*/
 h3 {
-  font-family: 'Lora',serif;
+  font-family: 'Ubuntu',serif;
   font-weight: 400;
   color: #143774;
   margin-top: 0;
@@ -60,6 +61,7 @@ strong {
   color: #1792d2;
   font-size: .75rem;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .article-title {
@@ -75,6 +77,8 @@ strong {
   color: #1792d2;
   text-decoration: none;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 .article-read-more:hover,
 .article-read-more:focus  {
@@ -89,6 +93,8 @@ strong {
 .widget-title,
 .widget-recent-post-title {
   font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 2px;
 }
 
 .widget-title {
@@ -127,7 +133,9 @@ header {
 
 footer {
   background: #143774;
-  color: white;
+  /* a = alpha i.e transparency or opacity */
+  /* rgba gives opportunity to blend the front color with the background color by using alpha on front color. */
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
   padding: 3em 0;
 }
@@ -168,6 +176,8 @@ nav a {
   text-decoration: none;
   color: #707070;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   padding: .25em 0;
 }
 
