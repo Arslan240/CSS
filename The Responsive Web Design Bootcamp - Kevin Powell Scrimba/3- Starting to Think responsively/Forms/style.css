@@ -1,0 +1,18 @@
+/* Forms have a lot of default styles. */
+form {
+  background-color: #efefef;
+  padding: 2em;
+}
+
+input {
+  margin-bottom: 1em;
+  padding: .25em;
+  border: 0;
+}
+
+button {
+  background: 0;
+  color:white ;
+  border: 0;
+  cursor: pointer;
+}
