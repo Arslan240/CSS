@@ -1,0 +1,10 @@
+/* vh = viewport height unit is according to the height of browser window */
+/* vw = viewport width changes according to the browser's window. We can also set width with vh unit. But it'll change the width as the height of browser changes. */
+/* vmin = viewport min unit changes height or width based on the smaller property (height or width), if the window is taller than it is wide, then height property in our css will be based on the width as long as it is smaller. When the window grows and now it is more wide than it is tall, then the css property will change according to the height*/
+/* vmax = viewport max unit is opposite to vmin. it will change the css property based on the bigger property of window. */
+header {
+  background: lightblue;
+  padding: 1em;
+  width: 50vw;
+  height: 75vh;
+}
