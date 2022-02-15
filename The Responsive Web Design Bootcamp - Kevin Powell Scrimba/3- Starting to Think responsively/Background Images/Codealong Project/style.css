@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;900&display=swap');
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  /* because all of the text is center in our layout */
+  text-align: center;
+}
+
+/* ============
+    TYPOGRAPHY
+   ============ */
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: white;
+  margin: 2em 0;
+}
+
+/* + is called combinator, a plus means adjacent sibling, which means if there is a paragraph immediately after an h1 it will get those styles. */
+/* not the best idea, if you have control over markup use classes instead of this method.*/
+/* h1 - p = affects all siblings that comes after h1 */
+h1 + p {
+  color: #f18119;
+  font-weight: 900;
+  font-size: 1.3125rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h2 + p {
+  font-weight: 900;
+  color: #f18119;
+  margin-top: 0;
+}
+
+.top-text {
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  order: -1;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+/* ============
+    Intro Section
+   ============ */
+
+
+.intro {
+  /* background color is important if the image does not load for some reason */
+  background-color: #404040;
+  background-image: url(images/dark-ribs.jpg);
+  padding: 0 .5em 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+    main-content section
+   ===================== */
+
+.main-content {
+  padding: 2em 1em;
+}
+
