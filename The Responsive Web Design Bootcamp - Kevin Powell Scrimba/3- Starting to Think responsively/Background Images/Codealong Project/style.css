@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
   color: #404040;
   /* because all of the text is center in our layout */
   text-align: center;
 }
+
+
 
 /* ============
     TYPOGRAPHY
@@ -18,7 +23,7 @@ h1 {
   font-size: 2.25rem;
   font-weight: 300;
   color: white;
-  margin: 2em 0;
+  margin: 0;
 }
 
 /* + is called combinator, a plus means adjacent sibling, which means if there is a paragraph immediately after an h1 it will get those styles. */
@@ -48,7 +53,11 @@ h2 + p {
   font-weight: 900;
   color: #f18119;
   text-transform: uppercase;
+  padding-top: 2px;
   order: -1;
+  margin: 0;
+  border-top: 5px solid #f18119;
+  border-image: linear-gradient(to left, #ff713b,#ffa51d) 1;
 }
 
 .fine-print {
@@ -68,10 +77,15 @@ strong {
 .intro {
   /* background color is important if the image does not load for some reason */
   background-color: #404040;
-  background-image: url(images/dark-ribs.jpg);
+  background-image: url(images/ribs.jpg); /*we can apply linear gradient and image in the same line so that we don't have to write two similar lines which will overwrite the previous code. */
+  background-size: cover;
+  background-position: center; /*center will be focused*/
+  background-blend-mode: multiply;
   padding: 0 .5em 2em;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
 }
 
 /* =====================
@@ -80,5 +94,128 @@ strong {
 
 .main-content {
   padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* .container {
+  outline: 2px solid red;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* .container-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+} */
+
+/* we are setting a max-width because at large screen the text spans from one side to other side  */
+/* every selector inside my intro class */
+/* > meaning the direct child of the selector */
+/* .intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+/* =====================
+    Form
+   ===================== */
+
+.email-collector {
+  /* outline: 2px solid orange; */
+  width: 80%;
+  max-width: 300px;
+}
+
+/* inputs have default widths on them, we overwrite them*/
+input,
+.btn {
+  width: 100%;
+  border-radius: 5px;
+}
+
+input {
+  font-family: inherit; /*this will inherit it from parent*/
+  text-align: inherit; 
+  padding: .25em;
+  margin-bottom: .75em;
+  border: 1px solid #404040;
+  transform: scale(1);
+  transition: transform 250ms;
+}
+input:focus {
+  transform: scale(1.1);
+}
+
+.btn {
+  font-family: inherit;
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-image: linear-gradient(to left,#ff713b, #ffa51d);
+  color: white;
+  transform: scale(1);
+  transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  /* color: black; */
+  transform: scale(1.2); 
+}
+
+/* =====================
+    media queries
+   ===================== */
+
+@media (min-width: 500px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh; /*min height because simple height can cause problems with overflowing.*/
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .container-intro {
+    /* height 100% works because the parent height is 100vh. */
+    /* height: 100%;
+  /*}  */
+}
+
+
+/* may  */
