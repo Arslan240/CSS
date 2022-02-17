@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #2c73d2;
+  color: #fff;
+  text-align: center;
+}
+
+.flex-container {
+  border: 10px solid #f9f871;
+  margin: 0 auto;
+  padding: .25em;
+  width: 80%;
+
+  display: flex;
+  /* justify-content: center;
+  align-content: flex-start; /*it applies on all the rows collectively*/
+  /* align-items: baseline; it applies within individual rows */ 
+  /*align items default is stretch, it stretches the flex items to fill all the available space*/
+  /* flex-flow: column wrap; flex-flow: direction wrap; This is a short hand for direction and wrap*/
+  /* flex-wrap: wrap; */
+  /* flex-direction: column; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column-reverse; */
+}
+
+/* .big {
+  font-size: 2em;
+} */
+
+.flex-item {
+  background: #8bee86;
+  margin: .5em;
+  padding: .5em;
+  color: #424656;
+}
+
+.flex-item-1 {
+  background-color: pink;
+  flex-grow: 1; /*it tells the element to grow and take up all the available space.*/
+}
+.flex-item-2 {
+  flex-grow: 1; 
+}
