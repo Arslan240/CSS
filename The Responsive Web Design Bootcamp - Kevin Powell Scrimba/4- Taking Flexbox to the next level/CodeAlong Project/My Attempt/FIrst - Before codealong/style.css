@@ -58,7 +58,6 @@ h1 {
   padding: 1em 1.8em;
   display: flex;
   min-height: 60vh;
-  background-color: rgb(110, 9, 9);
   flex-direction: column;
 }
 
