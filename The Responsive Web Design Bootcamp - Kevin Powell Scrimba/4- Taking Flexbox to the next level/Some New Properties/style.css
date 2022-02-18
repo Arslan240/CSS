@@ -16,6 +16,7 @@ body {
   width: 80%;
 
   display: flex;
+  height: 50vh;
   /* justify-content: center;
   align-content: flex-start; /*it applies on all the rows collectively*/
   /* align-items: baseline; it applies within individual rows */ 
@@ -36,12 +37,24 @@ body {
   margin: .5em;
   padding: .5em;
   color: #424656;
+  width: 200px;
 }
 
 .flex-item-1 {
   background-color: pink;
-  flex-grow: 1; /*it tells the element to grow and take up all the available space.*/
+  /* align-self: is used on a single flex-item unlike align-items  . */
+  align-self: flex-start;
+  /*flex-grow: 1;*/ /*it tells the element to grow and take up all the available space.*/
 }
 .flex-item-2 {
-  flex-grow: 1; 
+  /* flex-grow: 1;  */
 }
+
+
+/* Flex basis property, it will set the height/width of the flex-item according to the flex-direction, i.e width/height property that's along the flex-direction. If flex-direction is row, it'll affect width, if flex-directiton is column it'll affect height. Flex-basis is an ideal width/height. We can also use it in media queries when we change the direction of flex the flex-item will go from having width of 200px to have height of 200px. It'll also overwrite the width/height property depending on the main axis. */
+
+/* flex: grow shrink basis */
+/* flex: 0 1 auto; this is default */
+/* flex: 1; it means  */
+/* flex: initial; changes all things to default */
+/* flex: auto; it's flex: 1 1 auto; */

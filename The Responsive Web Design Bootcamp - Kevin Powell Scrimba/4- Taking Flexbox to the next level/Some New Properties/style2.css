@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  color: white;
+  background: #2c73d2;
+}
+
+/* Algin-items work on the flex-container, and on all the items */
+.flex-container {
+  width: 80%;
+  border: 10px solid #f9f871;
+  margin: 0 auto;
+  padding: .25em;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.flex-item {
+  background: #8bee86;
+  margin: .5em;
+  padding: .5em;
+  color: #424656;
+  width: 200px;
+    
+}
+
+/* Margins work different in flex-box because there are no collapsing margins. margin-bottom and margin-top, if they were touching will build on top of each other. */
+
+.flex-item-1 {
+  /* margin: auto; */
+  /* align-self works on individual flex-items, all the properties are similar. */
+  /* align-self: flex-end; */
+}
+
+
+.flex-item-3 {
+/* if flex-direction is column and we want to set the last item to all the way to the bottom. We can't use align-items property becuase it works on cross axis. */
+/* But we can use margin-top: auto; because in flex-box it'll push the item all the way to the bottom of available space. Because margins don't collapse but they are building on top of each other in these situations. */
+  /* we can also center it by doing margin-top and bottom to auto */
+  margin: auto 0;
+  /* margin-top: auto; */
+  /* margin-bottom: auto; */
+}
