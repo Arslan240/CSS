@@ -85,5 +85,6 @@ h1 {
   }
   .flex-container-outer {
     min-height: 80vh;
+    min-width: 60%;
   }
 }
