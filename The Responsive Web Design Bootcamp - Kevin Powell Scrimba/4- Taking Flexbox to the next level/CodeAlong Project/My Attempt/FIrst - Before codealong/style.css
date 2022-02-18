@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;900&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  background-color: #111d4a;
+  color: #ffffff;
+}
+
+/* =================
+    Background Image
+   ================= */
+.image-container {
+  background:rgb(75, 47, 21);
+  height: 40vh;
+  min-height: 170px;
+  width: 100%;
+  background-image: url("mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: #05cbe9;
+  margin-bottom: 0;
+  font-size: 28px;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 20px;
+  padding: .01em 1.5em;
+  color: #111d4a;
+  font-weight: 900;
+  background: #05cbe9;
+  border: 0;
+}
+
+
+/* =================
+    Layout
+   ================= */
+
+
+  /* FLex Container */
+
+.outer-flex {
+  display: flex;
+  flex-direction: column;
+}
+.flex-container-outer {
+  margin: 0;
+  padding: 1em 1.8em;
+  display: flex;
+  min-height: 60vh;
+  background-color: rgb(110, 9, 9);
+  flex-direction: column;
+}
+
+.flex-container-inner {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 0 1.5em 0;
+}
+
+@media (min-width: 560px) {
+  .outer-flex {
+    flex-direction: row;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  body {
+    font-size: 18px;
+  }
+  .image-container {
+    height: 35vh;
+    min-height: 100vh;
+    max-width: 40%;
+  }
+  .flex-container-outer {
+    min-height: 80vh;
+  }
+}
