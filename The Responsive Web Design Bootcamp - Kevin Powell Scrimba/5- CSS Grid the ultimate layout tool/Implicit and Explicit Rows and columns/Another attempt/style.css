@@ -1,20 +1,46 @@
 .grid {
   display: grid;
-  grid-template-columns: 150px 150px 200px;
+  /* grid-template-columns: 150px 150px 200px; */
+  grid-template-columns: 5em auto 5em;
+  /* we can use '.' in place of some column while defining grid-template-area and it'll ignore the area otherwise it'll break it if we don't do anything with it. */
+  /* every new "" double quotes is a new row.*/
   grid-template-areas: 
     "header header header"
-    "sidebar content content"
+    ". content ."
+    ". sidebar ."
     "footer footer footer";
+  
+  /* grid-template-areas: 
+    "header header header"
+    "sidebar content content"
+    "footer footer footer"; */
 }
 
-.grid-item {
-  padding: 1em 2em;
-  background: purple;
-  border: 2px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* We can use template areas to create media queries and work with them very easily as compared to without using grid-template-areas. 
+    we can change the layout just by changing the grid-template-areas property on grid container and browser will move all the grid-items accordingly.*/
+
+@media (min-width:450px){
+        .grid {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+          "header"
+          "content"
+          "sidebar"
+          "footer";
+  }
 }
+
+@media (min-width: 600px ){
+  .grid {
+    /* we have to just re apply the template columns because we are using columns to change the layout. */
+    grid-template-columns: 100px 300px 100px 100px;
+    grid-template-areas:
+      "header header header header"
+      "sidebar content content content"
+      "footer footer footer footer";
+  }
+}
+
 
 .header {
   grid-area: header;
@@ -27,4 +53,18 @@
 }
 .footer {
   grid-area: footer;
+}
+
+
+.grid-item {
+  padding: 1em 2em;
+  background: purple;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big {
+  padding: 5em 3em;
 }
