@@ -1,0 +1,26 @@
+.grid {
+  display: grid;
+  /* When the actual content overflows from the dedicated rows or columns, then they need somewhere to live so browser implicitly creates rows and columns accordingly. */
+  /* We can also set the width of rows or columns that are automatically created. If we have given some paddings and margins to those implicit grid items, it can interfere with the width assigned by grid-auto-rows. */
+  grid-auto-rows: 200px;
+  grid-template-rows: 50px 100px 150px;
+  grid-template-columns: 300px 500px;
+  grid-auto-columns: 200px;
+}
+
+.grid-item {
+  background-color: purple;
+  color: white;
+  padding: 1em 2em;
+  border: 2px solid rgb(252, 0, 42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.big {
+  padding: 3em 2em;
+  background: pink;
+  /* this grid-column changes the whole layout and add columns because we placed the container on the 4th column. */
+  grid-column: 4 / 5;
+}
