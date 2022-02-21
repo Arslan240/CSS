@@ -1,0 +1,91 @@
+.grid {
+  display: grid;
+  grid-template-columns: 150px 150px 200px;
+  /* Grid items stretch in height by default just as flexbox  */
+  /* We can also use align-items on grid also and we can change align-items from stretch. In grid, we don't use grid-start or grid-end we just use start and end.*/
+  /* align-items: start; */
+  /* align-items: end; */
+  /* align-items: center; */
+  /* align-items: baseline; */
+
+  /* We also have justify items property, we can use it on the entire grid. by default it is set to stretch, it will match the width of the entire column set explicitly. But we can change justify-items. Justify-items will set the width to match the width of content and it'll fit content.*/
+  justify-items: stretch;
+  /* gap does not add spaces on the outside of the grid items like padding would work on items inside a container*/
+  gap: 1em 5em;
+  /* We can add spaces in our grid by just using grid gap */
+  /* grid-column-gap: 2em;
+  grid-row-gap: 5em; */
+  
+}
+
+
+.grid-item {
+  background: #8813c1;
+  color: white;
+  padding: 1em 2em;
+  border: 2px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+
+
+}
+
+.big {
+  padding: 3em 2em;
+  background: #ff5670;
+}
+
+/* .start { */
+  /* we can also use align-self and justify-self on the individual grid items */
+  /* align-self: center; works on y-axis */
+  /* justify-self: center; works on x-axis */
+
+/* } */
+
+/* .end {
+  align-self: end;
+  justify-self: end;
+} */
+
+/* .grid {
+  display: grid;
+  grid-template: 100px 100px 100px/ 200px 200px 200px 200px;
+}
+
+.grid-item {
+  background: blue;
+  color: white;
+  padding: 1em 2em;
+  border: 2px solid purple;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+
+  /* short hands for column start and end */
+  /* grid-column: 1 / 4;
+  grid-row: 2 / 4; */
+  /* grid-column-start: 1;
+  grid-column-end: 4;
+
+  grid-row-start: 2;
+  grid-row-end: 4; */
+/* } */
+
+
+/* .one {
+  background: #b823c1;
+  grid-column: 2 / span 2; starting from 2 it will span 2 */
+  /* grid-row: span 2; */
+  /* grid-column: span 4; */
+  /* grid-row: 2/3;
+  grid-column: 1/4; */
+/* } */
+
+/* if we don't apply rows to a grid item, then other item may push it over and take the place. So, to overlap items maybe your rows are not on that's why they are not overlapping*/
+/* .two {
+  background: #ff5676;
+  grid-column: 2 / 4;
+  grid-row: 2/3; */
+/* } */
