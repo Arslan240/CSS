@@ -1,0 +1,30 @@
+.grid {
+  display: grid;
+  grid-template-columns: 150px 150px 200px;
+  grid-template-areas: 
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+}
+
+.grid-item {
+  padding: 1em 2em;
+  background: purple;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  grid-area: header;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.big {
+  grid-area: content;
+}
+.footer {
+  grid-area: footer;
+}

@@ -1,11 +1,37 @@
 .grid {
   display: grid;
+  /* Grid Areas - grid areas is the property where we can assign names to the columns and set the span of a specific container */
+  grid-template-columns: 150px 150px 200px;
+  grid-area: 
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
   /* When the actual content overflows from the dedicated rows or columns, then they need somewhere to live so browser implicitly creates rows and columns accordingly. */
   /* We can also set the width of rows or columns that are automatically created. If we have given some paddings and margins to those implicit grid items, it can interfere with the width assigned by grid-auto-rows. */
-  grid-auto-rows: 200px;
+  /* grid-auto-rows: 200px;
   grid-template-rows: 50px 100px 150px;
-  grid-template-columns: 300px 500px;
-  grid-auto-columns: 200px;
+  grid-auto-columns: 200px; */
+}
+
+/* ======================
+    GRID AREA ASSIGNMENT 
+   ======================*/
+
+.header {
+  grid-area: header;
+  background-color: aqua;
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: blue;
+}
+.big {
+  grid-area: content;
+  background-color: darkgoldenrod;
+}
+.footer {
+  grid-area: footer;
+  background-color: seagreen;
 }
 
 .grid-item {
@@ -22,5 +48,5 @@
   padding: 3em 2em;
   background: pink;
   /* this grid-column changes the whole layout and add columns because we placed the container on the 4th column. */
-  grid-column: 4 / 5;
+  /* grid-column: 4 / 5; */
 }
