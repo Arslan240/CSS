@@ -33,7 +33,9 @@
 @media (min-width: 600px ){
   .grid {
     /* we have to just re apply the template columns because we are using columns to change the layout. */
-    grid-template-columns: 100px 300px 100px 100px;
+    /* grid-template-columns: 100px 300px 100px 100px; */
+    /* We can use minmax() to give the columns or rows min and max values, they will become responsive and grow until their min or max is not met */
+    grid-template-columns: 100px minmax(200px, 700px) 100px 100px;
     grid-template-areas:
       "header header header header"
       "sidebar content content content"
