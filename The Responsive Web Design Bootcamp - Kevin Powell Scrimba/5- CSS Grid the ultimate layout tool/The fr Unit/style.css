@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  /* fr is called fractional unit, It is a fraction of the available space. If we have multiple elements then they will be divided according to the 1fr or 1fr or 3fr fractions accordingly
+     and this unit grows and shrinks like flex-grow and flex-shrinks */
+  /* This is the tedious version of making all the columns of equal width and it's also not responsive */
+  /* grid-template-columns: minmax(50px, 500px) minmax(50px, 500px) minmax(50px, 500px); */
+  /* grid-template-columns: 1fr 2fr 3fr; */
+  /* we can't use fr and minmax(1fr, 200px) - fr can't be used in the minimun of the min-max(). However we can use fr in the max of the min-max()*/
+  /* one column is fixed, and others are growing as the space is available.  */
+  grid-template-columns: 250px minmax(50px, 1fr) 1fr;
+}
+
+.grid-item {
+  padding: 1em 2em;
+  background: purple;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big {
+  padding: 5em 3em;
+}
