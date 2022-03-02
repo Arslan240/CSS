@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;700;900&display=swap");
+:root {
+  --color-primary: rgb(54, 112, 199);
+  --color-light: #f4f4f4;
+  --color-dark: #333;
+  --color-warning: rgb(99, 36, 36);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  display: grid;
+  grid-template: "header header header header" auto "...... lists active ......." auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+}
+
+.title {
+  grid-area: header;
+  text-align: center;
+  font-size: calc(5vw + 2rem);
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  margin: -0.05em 0 0.5em;
+}
+
+.all-tasks {
+  grid-area: lists;
+}
+
+.task-list {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  list-style: circle;
+  padding-left: 1.1em;
+}
+
+.list-name {
+  cursor: pointer;
+}
+
+.list-name:hover {
+  opacity: 0.7;
+}
+
+form {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+.btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+  transition: opacity 250ms ease-in;
+}
+
+.btn.create:hover {
+  opacity: 0.7;
+}
+
+.btn.delete {
+  opacity: 0.7;
+  font-size: 1rem;
+  transition: color 200ms;
+}
+
+.btn.delete:hover {
+  color: var(--color-warning);
+}
+
+.new {
+  background: transparent;
+  border: 0;
+  padding: 0.25em;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+  transition: border-bottom 150ms ease-in;
+  order: 2;
+}
+.new::placeholder {
+  opacity: 0.4;
+}
+
+.new:focus {
+  border-bottom: 3px solid currentColor;
+}
+
+.new:focus::placeholder {
+  opacity: 0.2;
+}
+
+.new.list {
+  font-size: 1.1rem;
+}
+
+.new.task {
+  margin-bottom: 0;
+}
+
+.active-list {
+  font-weight: 700;
+}
+
+.todo-list {
+  --spacer: 2rem;
+  grid-area: active;
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+.todo-header {
+  background: #e4e4e4;
+  padding: var(--spacer);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-title {
+  margin: 0 1em 0 0;
+}
+
+.task-count {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.todo-body {
+  padding: var(--spacer);
+  position: relative;
+}
+
+.new-task-creator .create{
+  color: var(--color-primary);
+}
+
+
+[type=checkbox] {
+  opacity: 0;
+  position: absolute;
+}
+
+.task label {
+  /* display: flex; */
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+.task {
+  position: relative;
+  margin-bottom: 1.25em;
+}
+
+.task::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -0.5em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.1;
+}
+
+.custom-checkbox {
+  --size: .75em;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  margin-right: var(--size);
+  cursor: pointer;
+  border: 2px solid currentColor;
+    /* this border-radius is actually making it circle */
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+/* when we hover on task, then we are styling custom-chekbox. This is the way to do this, Probably. */
+.task:hover .custom-checkbox,
+[type=checkbox]:focus + label .custom-checkbox {/*When all checkbox type inputs are focused, then apply the styles on the custom-checkbox that's in the label next to default checkbox which is focused using tab. This apply hover while hovering with mouse and alos using tab from the keyboard.*/
+  transform: scale(1.2);
+  color: var(--color-primary);
+}
+
+/* we also want to do something to the checkbox when the checkbox is checked. */
+/* we set box-shadow with inset attribute (shadow will be inside of the border) then the 2px sets the width and then color of inside shadow. It makes the circle looks like a real checked checkbox */
+[type=checkbox]:checked + label .custom-checkbox {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: inset 0 0 0px 2px white;
+}
+
+[type=checkbox]:checked + label {
+  opacity: 0.5;
+}
+
+.task label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  left: 1.5em;
+  height: 3px;
+  background: currentColor;
+  transform: scaleX(0);
+   /* origin sets the direction of starting of animation. It makes it looks like the line start to cut from right and goes to left. */
+  transform-origin: right;
+  transition: transform 150ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+  transform: scaleX(1);
+  /* when unchecked, it'll go from left to right. */
+  transform-origin: left;
+}
+
+.delete-stuff {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -35px;
+  color: var(--color-light);
+}
