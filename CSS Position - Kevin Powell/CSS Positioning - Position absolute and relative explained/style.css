@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+}
+
+.parent {
+  background: aquamarine;
+  height: 75vh;
+  width: 75vw;
+  padding: 1em;
+  /* position relative does not put element out of flow. But we can still use z-index on it. */
+  position: relative;
+}
+
+.child {
+  background: red;
+  width: 50px;
+  height: 50px;
+  /* when we set something's position to absolute. It comes out of the normal page flow. If something needs to go under it, it will go under it. We can also move it around. */
+  /* position absolute: it is according to some parent. If it's direct parent does not have position of relative then it will refer to the body. If direct parent have position of relative, then it refers to that parent.*/
+  position: absolute;
+  /* we can give it top right left bottom property */
+  /* top:0; tells us how far the element is from top. */
+  top: 0; 
+  bottom: 0;
+  left: 25%;
+  right: 25%;
+  /* height: 90%; */
+}
