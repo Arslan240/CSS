@@ -7,17 +7,19 @@
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   margin: 0;
   padding: 1em;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   background-color: var(--color-primary);
   color: var(--color-light);
+  display: -ms-grid;
   display: grid;
   grid-template: "header header header header" auto "...... lists active ......." auto/1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
@@ -29,7 +31,7 @@ body {
   font-weight: 900;
   color: rgba(0, 0, 0, 0.1);
   letter-spacing: 2px;
-  margin: -0.05em 0 0.5em;
+  margin: -.05em 0 0.5em;
 }
 
 .all-tasks {
@@ -52,6 +54,8 @@ body {
 }
 
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -67,6 +71,7 @@ form {
   font-size: 1.5rem;
   font-weight: 900;
   margin-right: 0.25em;
+  -webkit-transition: opacity 250ms ease-in;
   transition: opacity 250ms ease-in;
 }
 
@@ -77,6 +82,7 @@ form {
 .btn.delete {
   opacity: 0.7;
   font-size: 1rem;
+  -webkit-transition: color 200ms;
   transition: color 200ms;
 }
 
@@ -87,20 +93,48 @@ form {
 .new {
   background: transparent;
   border: 0;
-  padding: 0.25em;
   color: inherit;
+  padding: 0.25em;
   border-bottom: 1px solid currentColor;
   font-size: inherit;
   outline: none;
+  -webkit-transition: border-bottom 150ms ease-in;
   transition: border-bottom 150ms ease-in;
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
+
+.new::-webkit-input-placeholder {
+  opacity: 0.4;
+}
+
+.new:-ms-input-placeholder {
+  opacity: 0.4;
+}
+
+.new::-ms-input-placeholder {
+  opacity: 0.4;
+}
+
 .new::placeholder {
   opacity: 0.4;
 }
 
 .new:focus {
   border-bottom: 3px solid currentColor;
+}
+
+.new:focus::-webkit-input-placeholder {
+  opacity: 0.2;
+}
+
+.new:focus:-ms-input-placeholder {
+  opacity: 0.2;
+}
+
+.new:focus::-ms-input-placeholder {
+  opacity: 0.2;
 }
 
 .new:focus::placeholder {
@@ -129,9 +163,15 @@ form {
 .todo-header {
   background: #e4e4e4;
   padding: var(--spacer);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .list-title {
@@ -148,20 +188,22 @@ form {
   position: relative;
 }
 
-.new-task-creator .create{
+.new-task-creator .create {
   color: var(--color-primary);
 }
 
-
-[type=checkbox] {
+[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
 
 .task label {
-  /* display: flex; */
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -178,7 +220,7 @@ form {
   bottom: -0.5em;
   height: 1px;
   background: currentColor;
-  opacity: 0.1;
+  opacity: .1;
 }
 
 .custom-checkbox {
@@ -189,28 +231,30 @@ form {
   margin-right: var(--size);
   cursor: pointer;
   border: 2px solid currentColor;
-    /* this border-radius is actually making it circle */
   border-radius: 50%;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
   transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
-/* when we hover on task, then we are styling custom-chekbox. This is the way to do this, Probably. */
 .task:hover .custom-checkbox,
-[type=checkbox]:focus + label .custom-checkbox {/*When all checkbox type inputs are focused, then apply the styles on the custom-checkbox that's in the label next to default checkbox which is focused using tab. This apply hover while hovering with mouse and alos using tab from the keyboard.*/
-  transform: scale(1.2);
+[type="checkbox"]:focus + label .custom-checkbox {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   color: var(--color-primary);
 }
 
-/* we also want to do something to the checkbox when the checkbox is checked. */
-/* we set box-shadow with inset attribute (shadow will be inside of the border) then the 2px sets the width and then color of inside shadow. It makes the circle looks like a real checked checkbox */
-[type=checkbox]:checked + label .custom-checkbox {
+[type="checkbox"]:checked + label .custom-checkbox {
   background: var(--color-primary);
   border-color: var(--color-primary);
-  box-shadow: inset 0 0 0px 2px white;
+  -webkit-box-shadow: inset 0 0 0px 2px white;
+          box-shadow: inset 0 0 0px 2px white;
 }
 
-[type=checkbox]:checked + label {
+[type="checkbox"]:checked + label {
   opacity: 0.5;
 }
 
@@ -222,24 +266,34 @@ form {
   left: 1.5em;
   height: 3px;
   background: currentColor;
-  transform: scaleX(0);
-   /* origin sets the direction of starting of animation. It makes it looks like the line start to cut from right and goes to left. */
-  transform-origin: right;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
   transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
 }
 
 [type="checkbox"]:checked + label::after {
-  transform: scaleX(1);
-  /* when unchecked, it'll go from left to right. */
-  transform-origin: left;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .delete-stuff {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   position: absolute;
   width: 100%;
   left: 0;
   bottom: -35px;
   color: var(--color-light);
 }
+/*# sourceMappingURL=style.css.map */

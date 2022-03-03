@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <!-- defer keyword makes browser load the file after the layout is loaded. -->
+  <script defer src="script.js"></script>
   <title>Todo List</title>
 </head>   
 <body>
@@ -12,14 +14,15 @@
 
   <div class="all-tasks">
     <h2 class="task-list-title">My lists</h2>
-    <ul class="task-list">
-      <li class="active-list list-name">Youtube</li>
+    <ul class="task-list" data-lists>
+      <!-- <li class="active-list list-name">Youtube</li>
       <li class="list-name">Work</li>
-      <li class="list-name">Grocery</li>
+      <li class="list-name">Grocery</li> -->
     </ul>
 
-    <form action="">
-      <input type="text" class="new list" placeholder="new list name" aria-label="new list name">
+    <!-- custom data attributes because we want to  -->
+    <form action="" data-new-list-form>
+      <input type="text" class="new list" data-new-list-input placeholder="new list name" aria-label="new list name">
       <button class="btn create" aria-label="create new list">+</button>
     </form>
   </div>
