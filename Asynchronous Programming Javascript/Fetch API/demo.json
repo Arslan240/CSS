@@ -1,0 +1,38 @@
+[
+  {
+    "firstName": "Kathleen",
+    "lastName": "Hansen",
+    "Address": {
+      "streetAddress": "8551 Short Hill",
+      "city": "Bridgetown",
+      "state": "WY",
+      "zip": "91704"
+    },
+    "email": "Kathleen@gmail.com",
+    "phone": "(832)848-9076"
+  },
+  {
+    "firstName": "Linda",
+    "lastName": "Bennett",
+    "Address": {
+      "streetAddress": "8551 Short Hill",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "91704"
+    },
+    "email": "lindabennet@gmail.com",
+    "phone": "(832)848-9206"
+  },
+  {
+    "firstName": "Grace",
+    "lastName": "Hispanic",
+    "Address": {
+      "streetAddress": "8551 Short Hill",
+      "city": "Manhattan",
+      "state": "NYC",
+      "zip": "93785"
+    },
+    "email": "gracehispanic@gmail.com",
+    "phone": "(832)848-7283"
+  }
+]
