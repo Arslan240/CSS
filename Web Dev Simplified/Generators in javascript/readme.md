@@ -54,8 +54,8 @@ we can also pass values to next function. this value will be reurned by yield wh
 ### Usecases of Generators
 
   * For infinite loops
-  * 
   * For iterators
+  * Async / await uses generators and promises
 
 #### Infinite loops
 
