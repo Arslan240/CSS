@@ -36,7 +36,6 @@ async function getData() {
           postSection.appendChild(newPost);
         })
         .catch(err => console.log(err));
-
     }
   });
 }
